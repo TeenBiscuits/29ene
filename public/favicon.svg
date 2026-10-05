@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><style>
+    #light-icon {
+      display: inline;
+    }
+    #dark-icon {
+      display: none;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      #light-icon {
+        display: none;
+      }
+      #dark-icon {
+        display: inline;
+      }
+    }
+  </style><g id="light-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1133)"><rect width="1000" height="1000" fill="#f4f4f1"></rect><g transform="matrix(21.875,0,0,21.875,150,259.375)"><svg viewBox="0 0 32 22" aria-hidden="true" fill="#777770" width="32" height="22"><circle cx="22" cy="19" r="1.2"></circle><circle cx="20.243" cy="14.757" r="1.2"></circle><circle cx="16" cy="13" r="1.2"></circle><circle cx="11.757" cy="14.757" r="1.2"></circle><circle cx="10" cy="19" r="1.2"></circle><circle cx="26" cy="19" r="1.2"></circle><circle cx="24.66" cy="14" r="1.2"></circle><circle cx="21" cy="10.34" r="1.2"></circle><circle cx="16" cy="9" r="1.2"></circle><circle cx="11" cy="10.34" r="1.2"></circle><circle cx="7.34" cy="14" r="1.2"></circle><circle cx="6" cy="19" r="1.2"></circle><circle cx="30" cy="19" r="1.2"></circle><circle cx="28.934" cy="13.642" r="1.2"></circle><circle cx="25.899" cy="9.101" r="1.2"></circle><circle cx="21.358" cy="6.066" r="1.2"></circle><circle cx="16" cy="5" r="1.2"></circle><circle cx="10.642" cy="6.066" r="1.2"></circle><circle cx="6.101" cy="9.101" r="1.2"></circle><circle cx="3.066" cy="13.642" r="1.2"></circle><circle cx="2" cy="19" r="1.2"></circle></svg></g></g><defs><clipPath id="SvgjsClipPath1133"><rect width="1000" height="1000" x="0" y="0" rx="200" ry="200"></rect></clipPath></defs></svg></g><g id="dark-icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1134)"><rect width="1000" height="1000" fill="#f4f4f1"></rect><g transform="matrix(21.875,0,0,21.875,150,259.375)"><svg viewBox="0 0 32 22" aria-hidden="true" fill="#777770" width="32" height="22"><circle cx="22" cy="19" r="1.2"></circle><circle cx="20.243" cy="14.757" r="1.2"></circle><circle cx="16" cy="13" r="1.2"></circle><circle cx="11.757" cy="14.757" r="1.2"></circle><circle cx="10" cy="19" r="1.2"></circle><circle cx="26" cy="19" r="1.2"></circle><circle cx="24.66" cy="14" r="1.2"></circle><circle cx="21" cy="10.34" r="1.2"></circle><circle cx="16" cy="9" r="1.2"></circle><circle cx="11" cy="10.34" r="1.2"></circle><circle cx="7.34" cy="14" r="1.2"></circle><circle cx="6" cy="19" r="1.2"></circle><circle cx="30" cy="19" r="1.2"></circle><circle cx="28.934" cy="13.642" r="1.2"></circle><circle cx="25.899" cy="9.101" r="1.2"></circle><circle cx="21.358" cy="6.066" r="1.2"></circle><circle cx="16" cy="5" r="1.2"></circle><circle cx="10.642" cy="6.066" r="1.2"></circle><circle cx="6.101" cy="9.101" r="1.2"></circle><circle cx="3.066" cy="13.642" r="1.2"></circle><circle cx="2" cy="19" r="1.2"></circle></svg></g></g><defs><clipPath id="SvgjsClipPath1134"><rect width="1000" height="1000" x="0" y="0" rx="200" ry="200"></rect></clipPath></defs></svg></g></svg>

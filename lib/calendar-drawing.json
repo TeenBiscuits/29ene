@@ -1,0 +1,1200 @@
+[
+  {
+    "kind": "cl-mon",
+    "classes": "cl-mon",
+    "text": "Octubre 2026",
+    "left": 16.0,
+    "top": 6.0
+  },
+  {
+    "kind": "cl-lab",
+    "classes": "cl-lab",
+    "text": "mar. 6 oct. Disolución y convocatoria",
+    "max-width": 170.0,
+    "left": 218.0,
+    "top": 86.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-out",
+    "text": "1",
+    "left": 25.0,
+    "top": 42.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-out",
+    "text": "2",
+    "left": 77.0,
+    "top": 42.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-out",
+    "text": "3",
+    "left": 129.0,
+    "top": 42.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-out",
+    "text": "4",
+    "left": 181.0,
+    "top": 42.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-out",
+    "text": "5",
+    "left": 233.0,
+    "top": 42.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-wd",
+    "classes": "cl-wd",
+    "text": "LUNES",
+    "left": 234.0,
+    "top": 28.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-key",
+    "text": "6",
+    "left": 286.0,
+    "top": 42.0,
+    "width": 34.0,
+    "height": 34.0,
+    "color": "rgb(32, 32, 32)"
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "7",
+    "left": 338.0,
+    "top": 42.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "8",
+    "left": 390.0,
+    "top": 42.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "9",
+    "left": 442.0,
+    "top": 42.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "10",
+    "left": 494.0,
+    "top": 42.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-lead",
+    "classes": "cl-lead",
+    "text": "",
+    "left": 303.0,
+    "top": 76.0,
+    "height": 10.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "11",
+    "left": 546.0,
+    "top": 184.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "12",
+    "left": 494.0,
+    "top": 184.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-wd",
+    "classes": "cl-wd",
+    "text": "LUNES",
+    "left": 495.0,
+    "top": 170.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "13",
+    "left": 442.0,
+    "top": 184.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "14",
+    "left": 390.0,
+    "top": 184.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "15",
+    "left": 338.0,
+    "top": 184.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "16",
+    "left": 286.0,
+    "top": 184.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "17",
+    "left": 233.0,
+    "top": 184.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "18",
+    "left": 181.0,
+    "top": 184.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "19",
+    "left": 129.0,
+    "top": 184.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-wd",
+    "classes": "cl-wd",
+    "text": "LUNES",
+    "left": 130.0,
+    "top": 170.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "20",
+    "left": 77.0,
+    "top": 184.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-lab",
+    "classes": "cl-lab",
+    "text": "21 oct.–26 oct. Presentación de listas",
+    "max-width": 170.0,
+    "left": 16.0,
+    "top": 336.0
+  },
+  {
+    "kind": "cl-band",
+    "classes": "cl-band",
+    "text": "",
+    "left": 25.0,
+    "top": 292.0,
+    "width": 295.0,
+    "height": 34.0,
+    "color": "rgb(166, 166, 166)"
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "21",
+    "left": 25.0,
+    "top": 292.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "22",
+    "left": 77.0,
+    "top": 292.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "23",
+    "left": 129.0,
+    "top": 292.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "24",
+    "left": 181.0,
+    "top": 292.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "25",
+    "left": 233.0,
+    "top": 292.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "26",
+    "left": 286.0,
+    "top": 292.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-wd",
+    "classes": "cl-wd",
+    "text": "LUNES",
+    "left": 287.0,
+    "top": 278.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "27",
+    "left": 338.0,
+    "top": 292.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "28",
+    "left": 390.0,
+    "top": 292.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "29",
+    "left": 442.0,
+    "top": 292.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "30",
+    "left": 494.0,
+    "top": 292.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "31",
+    "left": 546.0,
+    "top": 292.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-lead",
+    "classes": "cl-lead",
+    "text": "",
+    "left": 42.0,
+    "top": 326.0,
+    "height": 10.0
+  },
+  {
+    "kind": "cl-mon",
+    "classes": "cl-mon",
+    "text": "Noviembre 2026",
+    "left": 465.0,
+    "top": 398.0
+  },
+  {
+    "kind": "cl-lab",
+    "classes": "cl-lab",
+    "text": "lun. 2 nov. Proclamación de candidatos",
+    "max-width": 170.0,
+    "left": 419.0,
+    "top": 478.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "1",
+    "left": 546.0,
+    "top": 434.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-key",
+    "text": "2",
+    "left": 494.0,
+    "top": 434.0,
+    "width": 34.0,
+    "height": 34.0,
+    "color": "rgb(77, 77, 77)"
+  },
+  {
+    "kind": "cl-wd",
+    "classes": "cl-wd",
+    "text": "LUNES",
+    "left": 495.0,
+    "top": 420.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "3",
+    "left": 442.0,
+    "top": 434.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "4",
+    "left": 390.0,
+    "top": 434.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "5",
+    "left": 338.0,
+    "top": 434.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "6",
+    "left": 286.0,
+    "top": 434.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "7",
+    "left": 233.0,
+    "top": 434.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "8",
+    "left": 181.0,
+    "top": 434.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "9",
+    "left": 129.0,
+    "top": 434.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-wd",
+    "classes": "cl-wd",
+    "text": "LUNES",
+    "left": 130.0,
+    "top": 420.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "10",
+    "left": 77.0,
+    "top": 434.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-lead",
+    "classes": "cl-lead",
+    "text": "",
+    "left": 511.0,
+    "top": 468.0,
+    "height": 10.0
+  },
+  {
+    "kind": "cl-lab",
+    "classes": "cl-lab",
+    "text": "13 nov.–27 nov. Campaña electoral",
+    "max-width": 170.0,
+    "left": 61.0,
+    "top": 620.0
+  },
+  {
+    "kind": "cl-lab",
+    "classes": "cl-lab",
+    "text": "jue. 19 nov. Fin solicitud del voto por correo",
+    "max-width": 170.0,
+    "left": 374.0,
+    "top": 620.0
+  },
+  {
+    "kind": "cl-band",
+    "classes": "cl-band",
+    "text": "",
+    "left": 129.0,
+    "top": 576.0,
+    "width": 399.0,
+    "height": 34.0,
+    "color": "rgb(254, 155, 155)"
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "11",
+    "left": 25.0,
+    "top": 576.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "12",
+    "left": 77.0,
+    "top": 576.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "13",
+    "left": 129.0,
+    "top": 576.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "14",
+    "left": 181.0,
+    "top": 576.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "15",
+    "left": 233.0,
+    "top": 576.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "16",
+    "left": 286.0,
+    "top": 576.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-wd",
+    "classes": "cl-wd",
+    "text": "LUNES",
+    "left": 287.0,
+    "top": 562.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "17",
+    "left": 338.0,
+    "top": 576.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "18",
+    "left": 390.0,
+    "top": 576.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-key",
+    "text": "19",
+    "left": 442.0,
+    "top": 576.0,
+    "width": 34.0,
+    "height": 34.0,
+    "color": "rgb(255, 208, 48)"
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "20",
+    "left": 494.0,
+    "top": 576.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-lead",
+    "classes": "cl-lead",
+    "text": "",
+    "left": 146.0,
+    "top": 610.0,
+    "height": 10.0
+  },
+  {
+    "kind": "cl-lead",
+    "classes": "cl-lead",
+    "text": "",
+    "left": 459.0,
+    "top": 610.0,
+    "height": 10.0
+  },
+  {
+    "kind": "cl-lab",
+    "classes": "cl-lab",
+    "text": "dom. 29 nov. Elecciones generales",
+    "max-width": 170.0,
+    "left": 61.0,
+    "top": 765.0
+  },
+  {
+    "kind": "cl-lab",
+    "classes": "cl-lab",
+    "text": "sáb. 28 nov. Jornada de reflexión",
+    "max-width": 170.0,
+    "left": 113.0,
+    "top": 672.0
+  },
+  {
+    "kind": "cl-lab",
+    "classes": "cl-lab",
+    "text": "jue. 26 nov. CERA: fin voto en urna",
+    "max-width": 170.0,
+    "left": 218.0,
+    "top": 826
+  },
+  {
+    "kind": "cl-lab",
+    "classes": "cl-lab",
+    "text": "mié. 25 nov. Fin envío voto por correo",
+    "max-width": 170.0,
+    "left": 270.0,
+    "top": 765.0
+  },
+  {
+    "kind": "cl-lab",
+    "classes": "cl-lab",
+    "text": "mar. 24 nov. CERA: fin voto por correo",
+    "max-width": 170.0,
+    "left": 322.0,
+    "top": 672.0
+  },
+  {
+    "kind": "cl-lab",
+    "classes": "cl-lab",
+    "text": "lun. 23 nov. Último día para publicar sondeos",
+    "max-width": 170.0,
+    "left": 374.0,
+    "top": 841.0
+  },
+  {
+    "kind": "cl-band",
+    "classes": "cl-band",
+    "text": "",
+    "left": 233.0,
+    "top": 721.0,
+    "width": 347.0,
+    "height": 34.0,
+    "color": "rgb(254, 155, 155)"
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "21",
+    "left": 546.0,
+    "top": 721.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "22",
+    "left": 494.0,
+    "top": 721.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-key",
+    "text": "23",
+    "left": 442.0,
+    "top": 721.0,
+    "width": 34.0,
+    "height": 34.0,
+    "color": "rgb(144, 194, 255)"
+  },
+  {
+    "kind": "cl-wd",
+    "classes": "cl-wd",
+    "text": "LUNES",
+    "left": 443.0,
+    "top": 707.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-key",
+    "text": "24",
+    "left": 390.0,
+    "top": 721.0,
+    "width": 34.0,
+    "height": 34.0,
+    "color": "rgb(255, 231, 151)"
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-key",
+    "text": "25",
+    "left": 338.0,
+    "top": 721.0,
+    "width": 34.0,
+    "height": 34.0,
+    "color": "rgb(255, 208, 48)"
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-key",
+    "text": "26",
+    "left": 286.0,
+    "top": 721.0,
+    "width": 34.0,
+    "height": 34.0,
+    "color": "rgb(255, 231, 151)"
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "27",
+    "left": 233.0,
+    "top": 721.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-key",
+    "text": "28",
+    "left": 181.0,
+    "top": 721.0,
+    "width": 34.0,
+    "height": 34.0,
+    "color": "rgb(255, 255, 255)"
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-key",
+    "text": "29",
+    "left": 129.0,
+    "top": 721.0,
+    "width": 34.0,
+    "height": 34.0,
+    "color": "rgb(252, 54, 54)"
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "30",
+    "left": 77.0,
+    "top": 721.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-wd",
+    "classes": "cl-wd",
+    "text": "LUNES",
+    "left": 78.0,
+    "top": 707.0
+  },
+  {
+    "kind": "cl-lead",
+    "classes": "cl-lead",
+    "text": "",
+    "left": 146.0,
+    "top": 755.0,
+    "height": 10.0
+  },
+  {
+    "kind": "cl-lead",
+    "classes": "cl-lead",
+    "text": "",
+    "left": 198.0,
+    "top": 704.0,
+    "height": 17.0
+  },
+  {
+    "kind": "cl-lead",
+    "classes": "cl-lead",
+    "text": "",
+    "left": 303.0,
+    "top": 755.0,
+    "height": 71
+  },
+  {
+    "kind": "cl-lead",
+    "classes": "cl-lead",
+    "text": "",
+    "left": 355.0,
+    "top": 755.0,
+    "height": 10.0
+  },
+  {
+    "kind": "cl-lead",
+    "classes": "cl-lead",
+    "text": "",
+    "left": 407.0,
+    "top": 704.0,
+    "height": 17.0
+  },
+  {
+    "kind": "cl-lead",
+    "classes": "cl-lead",
+    "text": "",
+    "left": 459.0,
+    "top": 755.0,
+    "height": 86.0
+  },
+  {
+    "kind": "cl-mon",
+    "classes": "cl-mon",
+    "text": "Diciembre 2026",
+    "left": 16.0,
+    "top": 903.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "1",
+    "left": 25.0,
+    "top": 939.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "2",
+    "left": 77.0,
+    "top": 939.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "3",
+    "left": 129.0,
+    "top": 939.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "4",
+    "left": 181.0,
+    "top": 939.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "5",
+    "left": 233.0,
+    "top": 939.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "6",
+    "left": 286.0,
+    "top": 939.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-band is-key",
+    "text": "7",
+    "left": 338.0,
+    "top": 939.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-wd",
+    "classes": "cl-wd",
+    "text": "LUNES",
+    "left": 339.0,
+    "top": 925.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "8",
+    "left": 390.0,
+    "top": 939.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "9",
+    "left": 442.0,
+    "top": 939.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "10",
+    "left": 494.0,
+    "top": 939.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "11",
+    "left": 546.0,
+    "top": 1047.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "12",
+    "left": 494.0,
+    "top": 1047.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "13",
+    "left": 442.0,
+    "top": 1047.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "14",
+    "left": 390.0,
+    "top": 1047.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-wd",
+    "classes": "cl-wd",
+    "text": "LUNES",
+    "left": 391.0,
+    "top": 1033.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "15",
+    "left": 338.0,
+    "top": 1047.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "16",
+    "left": 286.0,
+    "top": 1047.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "17",
+    "left": 233.0,
+    "top": 1047.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "18",
+    "left": 181.0,
+    "top": 1047.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "19",
+    "left": 129.0,
+    "top": 1047.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "20",
+    "left": 77.0,
+    "top": 1047.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-lab",
+    "classes": "cl-lab",
+    "text": "jue. 24 dic. Límite para constituir las Cortes",
+    "max-width": 170.0,
+    "left": 113.0,
+    "top": 1199.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "21",
+    "left": 25.0,
+    "top": 1155.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-wd",
+    "classes": "cl-wd",
+    "text": "LUNES",
+    "left": 26.0,
+    "top": 1141.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "22",
+    "left": 77.0,
+    "top": 1155.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d",
+    "text": "23",
+    "left": 129.0,
+    "top": 1155.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-key",
+    "text": "24",
+    "left": 181.0,
+    "top": 1155.0,
+    "width": 34.0,
+    "height": 34.0,
+    "color": "rgb(33, 133, 255)"
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-out",
+    "text": "25",
+    "left": 233.0,
+    "top": 1155.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-out",
+    "text": "26",
+    "left": 286.0,
+    "top": 1155.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-out",
+    "text": "27",
+    "left": 338.0,
+    "top": 1155.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-out",
+    "text": "28",
+    "left": 390.0,
+    "top": 1155.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-wd",
+    "classes": "cl-wd",
+    "text": "LUNES",
+    "left": 391.0,
+    "top": 1141.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-out",
+    "text": "29",
+    "left": 442.0,
+    "top": 1155.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-out",
+    "text": "30",
+    "left": 494.0,
+    "top": 1155.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-d",
+    "classes": "cl-d is-out",
+    "text": "31",
+    "left": 546.0,
+    "top": 1155.0,
+    "width": 34.0,
+    "height": 34.0
+  },
+  {
+    "kind": "cl-lead",
+    "classes": "cl-lead",
+    "text": "",
+    "left": 198.0,
+    "top": 1189.0,
+    "height": 10.0
+  },
+  {
+    "kind": "cl-band",
+    "classes": "cl-band",
+    "text": "",
+    "left": 181,
+    "top": 939,
+    "width": 190,
+    "height": 34,
+    "color": "rgb(255, 231, 151)"
+  },
+  {
+    "kind": "cl-lead",
+    "classes": "cl-lead",
+    "text": "",
+    "left": 198,
+    "top": 973,
+    "height": 10
+  },
+  {
+    "kind": "cl-lab",
+    "classes": "cl-lab",
+    "text": "4 dic.–7 dic. Escrutinio general y voto CERA",
+    "left": 164,
+    "top": 983,
+    "max-width": 250
+  }
+]
