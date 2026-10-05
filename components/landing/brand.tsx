@@ -18,7 +18,7 @@ const dots = [5, 7, 9].flatMap((count, row) =>
   }),
 );
 
-export function Brand({ locale }: { locale: Locale }) {
+export function Brand({ locale, href = "#inicio" }: { locale: Locale; href?: string }) {
   const root = useRef<HTMLAnchorElement>(null);
   useGSAP((_, contextSafe) => {
     if (!contextSafe) return;
@@ -68,7 +68,7 @@ export function Brand({ locale }: { locale: Locale }) {
 
   const c = copy[locale];
   return (
-    <a ref={root} href="#inicio" className="brand" aria-label={`29N, ${c.home}`}>
+    <a ref={root} href={href} className="brand" aria-label={`29N, ${c.home}`}>
       <svg viewBox="0 0 32 22" aria-hidden="true">
         {dots.map((dot, index) => (
           <circle key={index} cx={dot.x} cy={dot.y} r="1.2" />

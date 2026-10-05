@@ -1,3 +1,4 @@
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import type { CSSProperties } from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowUpRight01Icon } from "@hugeicons/core-free-icons";
@@ -8,7 +9,7 @@ import {
   pollHistory,
   pollPublished,
   pollSources,
-} from "@/lib/polls";
+} from "@/lib/polls/landing";
 
 const labels = {
   es: {
@@ -116,22 +117,26 @@ export function PollChart({ locale }: { locale: Locale }) {
         </dl>
       </div>
       <p className="poll-note">{c.note}</p>
-      <details className="poll-data">
-        <summary>{c.history}</summary>
-        <div className="poll-table-scroll" role="region" aria-label={c.history} tabIndex={0}>
-          <table>
-            <caption>{c.caption}</caption>
-            <thead><tr><th scope="col">{c.month}</th>{pollHistory.map((party) => <th scope="col" key={party.name}>{party.name}</th>)}</tr></thead>
-            <tbody>
-              <tr><th scope="row">{c.election}</th>{pollHistory.map((party) => <td key={party.name}>{party.election === undefined ? "" : `${number.format(party.election)}%`}</td>)}</tr>
-              {months.map((period) => <tr key={period}><th scope="row">{month.format(new Date(period))}</th>{pollHistory.map((party) => {
-                const point = party.points.find((point) => point.date === period);
-                return <td key={party.name}>{point ? `${number.format(point.value)}%` : ""}</td>;
-              })}</tr>)}
-            </tbody>
-          </table>
-        </div>
-      </details>
+      <Accordion className="poll-data">
+        <AccordionItem value="data">
+          <AccordionTrigger>{c.history}</AccordionTrigger>
+          <AccordionContent>
+            <div className="poll-table-scroll" role="region" aria-label={c.history} tabIndex={0}>
+              <table>
+                <caption>{c.caption}</caption>
+                <thead><tr><th scope="col">{c.month}</th>{pollHistory.map((party) => <th scope="col" key={party.name}>{party.name}</th>)}</tr></thead>
+                <tbody>
+                  <tr><th scope="row">{c.election}</th>{pollHistory.map((party) => <td key={party.name}>{party.election === undefined ? "" : `${number.format(party.election)}%`}</td>)}</tr>
+                  {months.map((period) => <tr key={period}><th scope="row">{month.format(new Date(period))}</th>{pollHistory.map((party) => {
+                    const point = party.points.find((point) => point.date === period);
+                    return <td key={party.name}>{point ? `${number.format(point.value)}%` : ""}</td>;
+                  })}</tr>)}
+                </tbody>
+              </table>
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
       <p className="poll-sources">
         {c.sources}: <a href={pollSources.pollster}>40dB. <HugeiconsIcon icon={ArrowUpRight01Icon} className="external-link-icon" aria-hidden="true" /></a>
         <span aria-hidden="true"> / </span>

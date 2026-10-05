@@ -17,7 +17,7 @@ import {
   type ChartConfig,
 } from "@/components/ui/chart";
 import { locales, type Locale } from "@/lib/locales";
-import { electionDate, pollHistory } from "@/lib/polls";
+import { electionDate, pollHistory } from "@/lib/polls/landing";
 
 const config = Object.fromEntries(
   pollHistory.map((party) => [party.name, { label: party.name, color: party.color }]),

@@ -277,7 +277,13 @@ function ChartLegendContent({
   payload,
   verticalAlign = "bottom",
   nameKey,
+  activeKey,
+  onItemEnter,
+  onItemLeave,
 }: React.ComponentProps<"div"> & {
+  activeKey?: string | null
+  onItemEnter?: (key: string) => void
+  onItemLeave?: () => void
   hideIcon?: boolean
   nameKey?: string
 } & RechartsPrimitive.DefaultLegendContentProps) {
@@ -297,13 +303,16 @@ function ChartLegendContent({
     >
       {payload
         .filter((item) => item.type !== "none")
-        .map((item, index) => {
+        .map((item) => {
           const key = `${nameKey ?? item.dataKey ?? "value"}`
           const itemConfig = getPayloadConfigFromPayload(config, item, key)
 
           return (
             <div
-              key={index}
+              key={key}
+              onMouseEnter={onItemEnter ? () => onItemEnter(key) : undefined}
+              onMouseLeave={onItemLeave}
+              style={{ opacity: activeKey && activeKey !== key ? 0.25 : 1 }}
               className={cn(
                 "flex items-center gap-1.5 [&>svg]:h-3 [&>svg]:w-3 [&>svg]:text-muted-foreground"
               )}

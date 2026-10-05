@@ -1,0 +1,242 @@
+{
+  "sourceUrl": "https://www.sigmados.com/barometro-de-octubre-estimacion-de-voto-para-las-elecciones-generales/",
+  "articleUrl": "https://www.elmundo.es/espana/encuestas/2026/10/04/6ac25e4dfc6c83bb588b458d.html",
+  "published": "2026-10-05",
+  "period": "2026-10",
+  "pollster": "Sigma Dos",
+  "commissionedBy": [
+    "EL MUNDO"
+  ],
+  "sample": 2116,
+  "fieldwork": [
+    "2026-09-22",
+    "2026-10-01"
+  ],
+  "electionDate": "2023-07-23",
+  "current": [
+    {
+      "key": "PP",
+      "value": 32.6,
+      "seats": 140
+    },
+    {
+      "key": "PSOE",
+      "value": 25.6,
+      "seats": 103
+    },
+    {
+      "key": "Vox",
+      "value": 18.3,
+      "seats": 63
+    },
+    {
+      "key": "Sumar",
+      "value": 6.6,
+      "seats": 9
+    },
+    {
+      "key": "Podemos",
+      "value": 3.3,
+      "seats": 2
+    },
+    {
+      "key": "ERC",
+      "value": 2.5,
+      "seats": 8
+    },
+    {
+      "key": "Bildu",
+      "value": 1.3,
+      "seats": 6
+    },
+    {
+      "key": "Junts",
+      "value": 1.1,
+      "seats": 4
+    },
+    {
+      "key": "PNV",
+      "value": 1,
+      "seats": 6
+    },
+    {
+      "key": "AC",
+      "value": 1,
+      "seats": 3
+    },
+    {
+      "key": "BNG",
+      "value": 0.9,
+      "seats": 2
+    },
+    {
+      "key": "AA",
+      "value": 0.8,
+      "seats": 2
+    },
+    {
+      "key": "CC",
+      "value": 0.5,
+      "seats": 1
+    },
+    {
+      "key": "UPN",
+      "value": 0.2,
+      "seats": 1
+    },
+    {
+      "key": "sigmaOther",
+      "value": 4.3,
+      "seats": 0
+    }
+  ],
+  "election": [
+    {
+      "key": "PP",
+      "value": 33.1,
+      "seats": 137
+    },
+    {
+      "key": "PSOE",
+      "value": 31.7,
+      "seats": 121
+    },
+    {
+      "key": "Vox",
+      "value": 12.4,
+      "seats": 33
+    },
+    {
+      "key": "Sumar",
+      "value": 12.3,
+      "seats": 31
+    },
+    {
+      "key": "ERC",
+      "value": 1.9,
+      "seats": 7
+    },
+    {
+      "key": "Junts",
+      "value": 1.6,
+      "seats": 7
+    },
+    {
+      "key": "Bildu",
+      "value": 1.4,
+      "seats": 6
+    },
+    {
+      "key": "PNV",
+      "value": 1.1,
+      "seats": 5
+    },
+    {
+      "key": "BNG",
+      "value": 0.6,
+      "seats": 1
+    },
+    {
+      "key": "CC",
+      "value": 0.5,
+      "seats": 1
+    },
+    {
+      "key": "UPN",
+      "value": 0.2,
+      "seats": 1
+    },
+    {
+      "key": "sigmaOther",
+      "value": 3.3,
+      "seats": 0
+    }
+  ],
+  "publishedTotal": 100,
+  "methodology": {
+    "universe": "Personas de 18 y más años residentes en España con derecho a voto.",
+    "mode": [
+      "CATI",
+      "CAWI (Panel Sigma Dos by Trust Survey)"
+    ],
+    "selection": "En CATI, selección aleatoria de hogar y cuotas de sexo y edad. En panel, asignación proporcional por sexo y edad. Distribución proporcional por comunidad autónoma en ambas muestras.",
+    "marginOfError": 2.2,
+    "confidence": 95.5,
+    "assumption": "Variables con dos categorías igualmente distribuidas."
+  },
+  "evidence": [
+    {
+      "url": "https://e01-elmundo.uecdn.es/elmundo/2026/graficos/oct/encuestas/voto646a.jpg",
+      "file": "vote-original.jpg",
+      "provides": [
+        "current",
+        "election"
+      ]
+    },
+    {
+      "url": "https://e01-elmundo.uecdn.es/elmundo/2026/graficos/oct/transferencia646.jpg",
+      "file": "transfer-original.jpg",
+      "provides": [
+        "transfer"
+      ]
+    },
+    {
+      "url": "https://www.sigmados.com/wp-content/uploads/2026/10/SIGMADOS-POSTS-9-1.png",
+      "file": "sigma-original.png",
+      "provides": [
+        "current"
+      ]
+    }
+  ],
+  "transfer": {
+    "PP": {
+      "PP": 73.3,
+      "Vox": 15.5,
+      "Otros (Sigma Dos)": 3.6,
+      "Indecisos (Sigma Dos)": 5.1
+    },
+    "PSOE": {
+      "PP": 8,
+      "PSOE": 69,
+      "Vox": 4.7,
+      "Sumar": 3.3,
+      "Otros (Sigma Dos)": 5.5,
+      "Indecisos (Sigma Dos)": 6.9
+    },
+    "Vox": {
+      "PP": 4,
+      "Vox": 88.3,
+      "Indecisos (Sigma Dos)": 2.2
+    },
+    "Sumar": {
+      "PSOE": 20.2,
+      "Podemos": 20.2,
+      "Sumar": 37.4,
+      "Otros (Sigma Dos)": 9.6,
+      "Indecisos (Sigma Dos)": 8.7
+    },
+    "No votó": {
+      "PP": 12.1,
+      "PSOE": 6.6,
+      "Vox": 13.9,
+      "No votaría": 41.3,
+      "Otros (Sigma Dos)": 13.4,
+      "Indecisos (Sigma Dos)": 10.3
+    },
+    "Resto": {
+      "PP": 7.1,
+      "PSOE": 6.8,
+      "Vox": 5.7,
+      "Otros (Sigma Dos)": 49.1,
+      "Indecisos (Sigma Dos)": 26.1
+    }
+  },
+  "limitations": [
+    "No se publican cruces por edad, sexo ni participación en estas publicaciones.",
+    "En el trasvase solo se transcriben cifras rotuladas. Las franjas sin porcentaje no se estiman a partir de su tamaño.",
+    "Otros e Indecisos del trasvase tienen definiciones agrupadas propias y no se identifican con Otro o No lo sé de 40dB.",
+    "Otros del hemiciclo conserva su categoría original; para ponderar se suman explícitamente todas las categorías fuera de los partidos comunes.",
+    "El resultado histórico transcrito suma 100,1 % por los porcentajes redondeados publicados. Se conserva sin modificar las cifras."
+  ],
+  "historicalPublishedTotal": 100.1
+}

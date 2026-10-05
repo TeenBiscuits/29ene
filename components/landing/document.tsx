@@ -14,6 +14,7 @@ export function Document({
   return (
     <html
       lang={lang}
+      data-scroll-behavior="smooth"
       className={`${sans.variable} ${mono.variable} antialiased`}
     >
       <body>{children}</body>

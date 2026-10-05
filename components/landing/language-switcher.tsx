@@ -8,9 +8,11 @@ import {
 export function LanguageSwitcher({
   locale,
   expanded = false,
+  section,
 }: {
   locale: Locale;
   expanded?: boolean;
+  section?: "encuestas";
 }) {
   return (
     <nav
@@ -21,7 +23,7 @@ export function LanguageSwitcher({
       {locales.map((lang) => (
         <a
           key={lang}
-          href={localePath(lang)}
+          href={section ? `${localePath(lang).replace(/\/$/, "")}/${section}` : localePath(lang)}
           lang={lang}
           hrefLang={lang}
           aria-current={lang === locale ? "page" : undefined}

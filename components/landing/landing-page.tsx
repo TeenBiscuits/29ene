@@ -1,13 +1,16 @@
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { pollCopy, pollsPath } from "@/lib/polls/copy";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { ArrowDown02Icon, ArrowUpRight01Icon, UserIcon } from "@hugeicons/core-free-icons";
 import { copy, type Locale } from "@/lib/locales";
-import { LanguageSwitcher } from "./language-switcher";
+import { SiteHeader } from "@/components/layout/site-header";
+import { SiteFooter } from "@/components/layout/site-footer";
 import { Hemicycle } from "@/components/landing/hemicycle";
 import { ElectoralCalendar } from "@/components/landing/electoral-calendar";
 import { ScrollReveal } from "@/components/landing/scroll-reveal";
 import { ShareButton } from "@/components/landing/share-button";
 import { PollChart } from "@/components/landing/poll-chart";
-import { Brand } from "./brand";
 
 export function LandingPage({ locale }: { locale: Locale }) {
   const c = copy[locale];
@@ -16,10 +19,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
       <a className="skip-link" href="#contenido">
         {c.skip}
       </a>
-      <header className="site-header">
-        <Brand locale={locale} />
-        <LanguageSwitcher locale={locale} />
-      </header>
+      <SiteHeader locale={locale} />
       <main id="contenido">
         <section id="inicio" className="hero">
           <div className="hero-emblem">
@@ -51,6 +51,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
             <span className="section-kicker">{c.pollsKicker}</span>
             <h2>{c.pollsTitle}</h2>
             <PollChart locale={locale} />
+            <Button nativeButton={false} render={<Link href={pollsPath(locale)} />} variant="outline" size="lg">{pollCopy[locale].link}</Button>
           </article>
           <article className="future-section proposals">
             <span className="section-kicker">{c.proposalsKicker}</span>
@@ -103,17 +104,7 @@ export function LandingPage({ locale }: { locale: Locale }) {
           </a>
         </section>
       </main>
-      <footer className="site-footer">
-        <div className="footer-top">
-          <Brand locale={locale} />
-          <LanguageSwitcher locale={locale} expanded />
-        </div>
-        <div className="footer-bottom">
-          <span>{c.by} Pablo Portal López</span>
-          <span>{c.independent}</span>
-          <a href="https://github.com/TeenBiscuits/29ene">{c.code} <HugeiconsIcon icon={ArrowUpRight01Icon} className="external-link-icon" aria-hidden="true" /></a>
-        </div>
-      </footer>
+      <SiteFooter locale={locale} />
     </>
   );
 }

@@ -1,0 +1,60 @@
+[
+  {
+    "id": "40db-2026-10",
+    "pollster": "40dB.",
+    "period": "2026-10",
+    "weight": 1,
+    "sample": 2000,
+    "fieldwork": [
+      "2026-09-25",
+      "2026-09-28"
+    ],
+    "tables": "data/polls/raw/40db/2026-10/04_Tablas_octubre_2026.xlsx",
+    "methodology": "data/polls/raw/40db/2026-10/02_Nota_metodologica_octubre_2026.pdf",
+    "voteReport": "data/polls/raw/40db/2026-10/05_Informe_octubre_2026_voto.pdf",
+    "sourceUrl": "https://elpais.com/espana/2026-10-05/consulte-todos-los-datos-internos-de-la-encuesta-de-el-pais-cuestionarios-cruces-y-respuestas-individuales.html",
+    "commissionedBy": [
+      "EL PAÍS",
+      "Cadena SER"
+    ]
+  },
+  {
+    "id": "gad3-2026-09",
+    "pollster": "GAD3",
+    "period": "2026-09",
+    "weight": 1,
+    "sample": 1010,
+    "fieldwork": [
+      "2026-09-01",
+      "2026-09-03"
+    ],
+    "adapter": "published-json",
+    "publishedData": "data/polls/raw/gad3/2026-09/published-data.json",
+    "dataset": "data/polls/raw/gad3/2026-09/estimation.tsv",
+    "sourceUrl": "https://www.gad3.com/barometro-abc-estimacion-de-voto-nacional-septiembre-2026/",
+    "commissionedBy": [
+      "ABC"
+    ]
+  },
+  {
+    "id": "sigma-dos-2026-10",
+    "pollster": "Sigma Dos",
+    "period": "2026-10",
+    "weight": 1,
+    "sample": 2116,
+    "fieldwork": [
+      "2026-09-22",
+      "2026-10-01"
+    ],
+    "adapter": "published-json",
+    "publishedData": "data/polls/raw/sigma-dos/2026-10/published-data.json",
+    "dataset": "data/polls/raw/sigma-dos/2026-10/estimation.tsv",
+    "sourceUrl": "https://www.sigmados.com/barometro-de-octubre-estimacion-de-voto-para-las-elecciones-generales/",
+    "articleUrl": "https://www.elmundo.es/espana/encuestas/2026/10/04/6ac25e4dfc6c83bb588b458d.html",
+    "commissionedBy": [
+      "EL MUNDO"
+    ],
+    "originalVote": "data/polls/raw/sigma-dos/2026-10/vote-original.jpg",
+    "originalTransfer": "data/polls/raw/sigma-dos/2026-10/transfer-original.jpg"
+  }
+]

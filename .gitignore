@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Reproducible survey build artifacts
+/lib/polls/generated/
+/public/polls/

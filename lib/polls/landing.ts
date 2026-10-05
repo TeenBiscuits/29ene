@@ -1,4 +1,4 @@
-import history from "./poll-history.json";
+import history from "./history.json";
 
 // Transcribed from encuesta1.html. Its SVG coordinates encode monthly
 // estimates on a linear 0–36% axis. Missing months remain missing.
