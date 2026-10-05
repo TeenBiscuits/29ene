@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 29N · Guía electoral
 
-## Getting Started
+Web infográfica para ayudar a la ciudadanía a informarse sobre las elecciones generales en España, con lenguaje sencillo, fuentes enlazadas y contenido en español, galego, català y euskara.
 
-First, run the development server:
+El proyecto está en fase de definición. La interfaz electoral todavía no está implementada.
+
+## Documentación
+
+- [Alcance y diseño acordados](docs/producto.md).
+- [Criterios editoriales](docs/editorial.md).
+- [Glosario](GLOSSARY.md).
+- [Decisiones de arquitectura](docs/adr/).
+
+## Desarrollo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+La aplicación local se sirve en http://localhost:3000. Los comandos disponibles están en `package.json`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+La tecnología acordada es Next.js, shadcn y GSAP para las animaciones. GSAP está pendiente de incorporar. Antes de desarrollar, consulta [AGENTS.md](AGENTS.md) y las guías locales de la versión instalada de Next.js.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+El despliegue previsto es Vercel, en https://29ene.pablopl.dev. La licencia acordada para el código es MIT; queda pendiente añadir el archivo de licencia.
 
-## Learn More
+## Contribuciones
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Las contribuciones se propondrán mediante pull requests y el responsable del proyecto aprobará su publicación. Se habilitarán plantillas de GitHub Issues para corregir información y comunicar problemas de la web.
