@@ -1052,3 +1052,29 @@ h2 {
 @media (max-width: 760px) {
   .survey-hemicycle-values.survey-detailed-values { grid-template-columns: minmax(0, 1fr); }
 }
+
+/* Survey profiles keep long labels legible without widening the page. */
+.survey-generation-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.survey-generation-grid h3 { margin: 0 0 12px; font-size: 1rem; font-weight: 600; }
+.survey-profile-scroll { overflow-x: auto; max-width: 100%; }
+.survey-profile-scroll > [data-slot="chart"] { min-width: 520px; }
+.survey-generation-grid .survey-profile-scroll > [data-slot="chart"] { min-width: 0; }
+.survey-grid > [data-slot="card"] { min-width: 0; }
+.survey-grid [data-slot="card-footer"] { flex-wrap: wrap; gap: 8px 16px; }
+.survey-page .survey-intro { gap: 16px; margin-bottom: 28px; }
+.survey-page .survey-toolbar { margin-bottom: 28px; }
+.survey-page .survey-grid { gap: 24px; }
+.survey-page .survey-stacked-chart { height: 420px; }
+.survey-page .survey-sex-chart { height: 220px; }
+@media (max-width: 760px) {
+  .survey-generation-grid { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .survey-page .survey-grid { gap: 20px; }
+  .survey-page .survey-intro p { font-size: 1rem; line-height: 1.6; }
+  .survey-page .survey-intro h1 { font-size: 2.5rem; }
+  .survey-page .survey-stacked-chart { height: 460px; }
+  .survey-page .survey-sex-chart { height: 260px; }
+  .survey-profile-scroll { padding-bottom: 8px; }
+}
+
+.survey-scroll-hint { display: none; font-size: .75rem; color: var(--muted-foreground); margin: 0 0 12px; }
+@media (max-width: 760px) { .survey-scroll-hint { display: block; } }

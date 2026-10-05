@@ -36,7 +36,7 @@ for (const source of sources) {
   source.sha256 = createHash('sha256').update(bytes).digest('hex');
   const book = new ExcelJS.Workbook();
   await book.xlsx.load(bytes);
-  for (const [sheetName, questions] of [['Recuerdo de voto - Generales', ['P2', 'P3']], ['Edad', ['P3']], ['Sexo', ['P3']]]) {
+  for (const [sheetName, questions] of [['Recuerdo de voto - Generales', ['P2', 'P3', 'P4', 'P5_1', 'P5_2', 'P5_3', 'P5_4', 'P5_5', 'P5_6']], ['Edad', ['P3']], ['Sexo', ['P3']], ['Ideología 7', ['P3']], ['Sexo - Generación', ['P3']]]) {
     const sheet = book.getWorksheet(sheetName);
     if (!sheet) throw new Error(`Missing worksheet ${sheetName}`);
     for (const question of questions) {
@@ -46,7 +46,7 @@ for (const source of sources) {
         const row = sheet.getRow(r);
         const response = row.getCell(2).value;
         if (response === null) break;
-        for (let col = 3; col <= (sheetName === 'Sexo' ? 5 : 9); col++) {
+        for (let col = 3; col <= (sheetName === 'Sexo' ? 5 : ['Ideología 7', 'Sexo - Generación'].includes(sheetName) ? 11 : 9); col++) {
           const segment = col === 3 ? 'Total' : sheet.getRow(3).getCell(col).value;
           const value = row.getCell(col).value;
           if (value !== null && (typeof value !== 'number' || value < 0 || value > 100)) throw new Error(`Invalid percentage ${sheetName}!${row.getCell(col).address}`);
@@ -65,6 +65,8 @@ const latest = sources.map(s => s.period).sort().at(-1);
 const metrics = aggregatePolls(observations, sources, latest);
 const ageObservations = groupAgeObservations(observations);
 const sexObservations = groupAgeObservations(observations, 'Sexo');
+const ideologyObservations = groupAgeObservations(observations, 'Ideología 7');
+const sexGenerationObservations = groupAgeObservations(observations, 'Sexo - Generación');
 const quote = value => `"${String(value ?? '').replaceAll('"', '""')}"`;
 const columns = ['source','period','sheet','question','response','segment','value','cell','base'];
 await mkdir('public/polls', { recursive: true });
@@ -75,5 +77,5 @@ for (const source of sources) {
   await writeFile(`public/polls/${source.id}/observations.csv`, [columns.join(','), ...rows.map(row => columns.map(col => quote(row[col])).join(','))].join('\n') + '\n');
 }
 await mkdir('lib/polls/generated', { recursive: true });
-await writeFile('lib/polls/generated/details.json', JSON.stringify({ period: latest, sources, observations, ageObservations, sexObservations, voteComparisons, metrics }, null, 2) + '\n');
+await writeFile('lib/polls/generated/details.json', JSON.stringify({ period: latest, sources, observations, ageObservations, sexObservations, ideologyObservations, sexGenerationObservations, voteComparisons, metrics }, null, 2) + '\n');
 console.log(`Extracted ${observations.length} source cells; ${metrics.length} comparable metrics for ${latest}.`);
