@@ -19,6 +19,8 @@ Los HTML de referencia se eliminaron una vez trasladado su diseño a los compone
 
 `pnpm dev` y `pnpm build` ejecutan primero `pnpm polls:build`. Este comando regenera el JSON y las descargas a partir de los archivos originales. `pnpm polls:test` comprueba la extracción y los cálculos. No es necesario conservar ni editar manualmente los artefactos generados.
 
+`pnpm 40db:sync` descarga el ZIP oficial de 40dB. para octubre de 2026 y actualiza los originales locales si han cambiado. `node scripts/polls/sync-40db.mjs --check` descarga y compara sus SHA-256 sin escribir archivos. Ambos comandos requieren `unzip` en el sistema.
+
 El Excel aporta 475 observaciones de las preguntas P2 y P3 de «Recuerdo de voto - Generales», «Edad» y «Sexo». Se conserva el porcentaje, la hoja, la celda, la base y el SHA-256 de las tablas. Las 475 celdas se verificaron contra el Excel con un lector independiente. Una celda vacía permanece `null`, nunca se inventa un cero. Las tablas ya incluyen la ponderación de 40dB.; no se recalculan frecuencias sin ponderar a partir de microdatos. Estos últimos se conservan para trazabilidad, pero no se publican en la web.
 
 La participación muestra la respuesta 10 de P2. La intención directa de P3 usa todos los encuestados de cada segmento como base. Las transferencias muestran cinco partidos y permiten consultar todas las respuestas en una tabla, sin renormalizar los porcentajes.

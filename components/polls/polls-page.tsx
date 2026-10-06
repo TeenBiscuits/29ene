@@ -10,9 +10,24 @@ import { SiteFooter } from '@/components/layout/site-footer';
 import { copy, localePath, type Locale } from '@/lib/locales';
 import { pollCopy } from '@/lib/polls/copy';
 import { pollDetails } from '@/lib/polls/details';
+import { latestPollsterSources } from '@/lib/polls/coverage.mjs';
+import { pollCheckCopy } from '@/lib/polls/pollcheck-copy';
+import { pollCheckForPollster, pollCheckSnapshot } from '@/lib/polls/pollcheck';
+import { HugeiconsIcon } from '@hugeicons/react';
+import { ArrowUpRight01Icon } from '@hugeicons/core-free-icons';
 
 export function PollsPage({ locale }: { locale: Locale }) {
   const c = pollCopy[locale];
+  const pollCheckText = pollCheckCopy[locale];
+  const pollCheckRows = latestPollsterSources(pollDetails.sources).flatMap(source => {
+    const result = pollCheckForPollster(source.pollster);
+    if (!result) return [];
+    const score = Number(result.poll_check);
+    return Number.isFinite(score) ? [{ id: source.id, pollster: source.pollster, score }] : [];
+  });
+  const scoreFormatter = new Intl.NumberFormat(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const updatedDate = new Intl.DateTimeFormat(locale, { dateStyle: 'long', timeZone: 'UTC' })
+    .format(new Date(pollCheckSnapshot.fetchedAt));
   return <>
     <a className="skip-link" href="#contenido">{copy[locale].skip}</a>
     <SiteHeader locale={locale} section="encuestas" />
@@ -28,6 +43,26 @@ export function PollsPage({ locale }: { locale: Locale }) {
       </PollExplorer>
       <section className="survey-methods">
         <h2>{c.methods}</h2><p>{c.note}</p><p>{pollSelectorCopy[locale].formula}</p><p>{c.rounding}</p>
+        {pollCheckRows.length > 0 ? <div className="survey-pollcheck">
+          <div className="survey-pollcheck-heading">
+            <h3>{pollCheckText.title}</h3>
+            <p>{pollCheckText.description}</p>
+          </div>
+          <ul className="survey-pollcheck-list">
+            {pollCheckRows.map(row => <li key={row.id}>
+              <span className="survey-pollcheck-company">{row.pollster}</span>
+              <strong className="survey-pollcheck-score" aria-label={`${pollCheckText.title}: ${scoreFormatter.format(row.score)} / 10`}>
+                {scoreFormatter.format(row.score)}<span aria-hidden="true">/10</span>
+              </strong>
+            </li>)}
+          </ul>
+          <div className="survey-pollcheck-footer">
+            <p className="survey-pollcheck-updated">{pollCheckText.updated} {updatedDate}.</p>
+            <a className="survey-pollcheck-more" href={pollCheckSnapshot.sourceUrl} target="_blank" rel="noreferrer">
+              {pollCheckText.moreInfo}<HugeiconsIcon icon={ArrowUpRight01Icon} className="external-link-icon" aria-hidden="true" />
+            </a>
+          </div>
+        </div> : null}
         <h3>{c.methodologyTitle}</h3>
         <Accordion defaultValue={[]} className="survey-methodology-accordion">
           {pollDetails.sources.map(source => <AccordionItem key={source.id} value={source.id}>

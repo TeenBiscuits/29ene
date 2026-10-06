@@ -89,11 +89,13 @@ export function PollExplorer({ locale, breadcrumb, children }: { locale: Locale;
         </DropdownMenuContent>
       </DropdownMenu>
     </div>
-    {children}
-    <div aria-live="polite" aria-atomic="true" className="survey-selection-status">
-      <p>{labels.weights}: {periodSources.map(source => `${source.pollster} ${pollNumbers[locale].format(source.weight / totalWeight * 100)}%`).join(' / ')} · {period}</p>
-      {new Set(sources.map(source => source.period)).size > 1 ? <p>{c.periodSelection} {sources.filter(source => source.period !== period).map(source => `${source.pollster} · ${source.period}`).join(' / ')}</p> : null}
-      {availableSources.length === 1 ? <p>{labels.onlyOne}</p> : null}
+    <div className="survey-overview">
+      {children}
+      <div aria-live="polite" aria-atomic="true" className="survey-selection-status">
+        <p>{labels.weights}: {periodSources.map(source => `${source.pollster} ${pollNumbers[locale].format(source.weight / totalWeight * 100)}%`).join(' / ')} · {period}</p>
+        {new Set(sources.map(source => source.period)).size > 1 ? <p>{c.periodSelection} {sources.filter(source => source.period !== period).map(source => `${source.pollster} · ${source.period}`).join(' / ')}</p> : null}
+        {availableSources.length === 1 ? <p>{labels.onlyOne}</p> : null}
+      </div>
     </div>
       <div className="survey-grid">
         <Card className="survey-wide survey-current-card"><CardHeader><CardTitle><h2>{previousRows.length ? c.current : c.currentOnly}</h2></CardTitle><CardDescription>{previousRows.length ? c.currentDescription : c.currentOnlyDescription}</CardDescription></CardHeader><CardContent>{hasPublishedValues(comparisonMetrics, 'Estimación electoral', 'Estimación') ? <><VoteHemicycle rows={displayRows} previous={previousRows} config={comparisonConfig} locale={locale} title={c.current} currentLabel={c.currentSeries} previousLabel={c.electionSeries} noHistoricalLabel={c.noHistorical} seatLabel={c.seatNote} />{comparison.grouped ? <p className="survey-age-note">{c.comparisonGrouping}</p> : null}{incompleteEstimate ? <p className="survey-age-note">{c.publishedTotal}: {pollNumbers[locale].format(displayRows.reduce((sum, row) => sum + (row.value ?? 0), 0))}%. {c.incompleteEstimate}</p> : null}</> : empty}</CardContent><CardFooter>{sourceNote(comparisonMetrics, 'Estimación electoral', 'Estimación')} {periodSources.filter(source => source.voteReport).map(source => <a key={source.id} href={`/polls/${source.id}/vote-report.pdf`} download className="survey-report-download"><HugeiconsIcon icon={Download04Icon} size={16} aria-hidden="true" />{c.voteReport}</a>)}</CardFooter></Card>

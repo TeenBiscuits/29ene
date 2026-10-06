@@ -8,6 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "polls:build": "node scripts/polls/build.mjs",
+    "40db:sync": "node scripts/polls/sync-40db.mjs",
+    "pollcheck:sync": "node scripts/polls/scrape-pollcheck.mjs",
     "polls:test": "node --test tests/polls/*.test.mjs"
   },
   "dependencies": {
