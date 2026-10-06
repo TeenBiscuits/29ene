@@ -41,19 +41,11 @@ Solo se combinan fuentes del mismo periodo y observaciones comparables mediante 
 
 El selector ofrece la encuesta más reciente de cada encuestadora y exige al menos una seleccionada. Gráficas, tablas y etiquetas cambian juntas. El navegador combina porcentajes ya extraídos; no procesa archivos originales ni microdatos.
 
-## GAD3 para ABC · Septiembre de 2026
-
-Fuente: [Barómetro ABC de GAD3](https://www.gad3.com/barometro-abc-estimacion-de-voto-nacional-septiembre-2026/), publicado el 7 de septiembre. La página incluye un [gráfico con el dataset original](https://datawrapper.dwcdn.net/WfdjI/2/). `data/polls/raw/gad3/2026-09/estimation.tsv` conserva ese dataset y `published-data.json` reúne los porcentajes, escaños, ficha técnica y procedencia. El adaptador valida el JSON contra el TSV en build time; no depende de descargar la web durante la compilación.
-
-La fuente publica PP 31,1 % (133 escaños), PSOE 26,1 % (105), Vox 19,2 % (69), Sumar 7 % (9) y Otros 11,4 % (34). Los porcentajes suman **94,8 %**, aunque los escaños suman 350. Se conserva la discrepancia, sin normalizar ni asignar la diferencia a un partido. El sector transparente del arco es solo geometría para mantener los ángulos proporcionales a los porcentajes publicados; no genera una observación ni aparece en el tooltip. «Otros partidos» de GAD3 no equivale a «Otro + Blanco» de 40dB. y usa una clave distinta.
-
-GAD3 no publica cruces de participación, edad, sexo o trasvase, ni el resultado histórico del 23J en esta fuente. No se rellenan esos datos con otra encuestadora desactivada. Las gráficas sin observaciones numéricas muestran un estado explícito sin datos y omiten ejes y tablas vacías. Un cero publicado sigue siendo un dato válido. El arco histórico solo se dibuja si lo aporta una fuente activa.
-
 ## Periodos y cobertura de la selección
 
-El selector ofrece la encuesta más reciente de cada encuestadora, mostrando su mes. El periodo de cálculo es el más reciente entre las encuestas seleccionadas. Cuando se seleccionan meses diferentes, la página lo explica y muestra las fuentes de otro mes que quedan fuera. Septiembre de GAD3 y octubre de 40dB. **no se ponderan juntos**. Al seleccionar solo GAD3, el periodo pasa a septiembre y sus datos se muestran; al restaurar todas, se vuelve a octubre. Los pesos mostrados corresponden a las fuentes del periodo activo y cada gráfica identifica solo sus contribuyentes reales.
+El selector ofrece la encuesta más reciente de cada encuestadora, mostrando su mes. El periodo de cálculo es el más reciente entre las encuestas seleccionadas. Cuando se seleccionan meses diferentes, la página lo explica y muestra las fuentes de otro mes que quedan fuera; nunca se ponderan periodos distintos juntos. Los pesos mostrados corresponden a las fuentes del periodo activo y cada gráfica identifica solo sus contribuyentes reales.
 
-Las pruebas de cobertura comprueban la selección de GAD3 sin cruces, la restauración de datos de 40dB., los periodos distintos, la diferencia entre cero y ausencia, y los valores del dataset original.
+Las pruebas de cobertura comprueban las fuentes del periodo activo, la diferencia entre cero y ausencia, y los valores publicados.
 
 ## Sigma Dos para EL MUNDO · Octubre de 2026
 
@@ -65,4 +57,4 @@ El trasvase muestra seis grupos de recuerdo de voto: PP, PSOE, Vox, Sumar, No vo
 
 En selección individual se conservan el desglose y los escaños publicados. Para varias fuentes del mismo mes, `lib/polls/comparison.mjs` identifica los partidos desglosados por todas y suma, por fuente, las demás categorías publicadas en «Resto del voto publicado», antes de calcular la media. Así, SALF y «Otro + Blanco» de 40dB. suman 14,3 %, y los partidos pequeños más «Otros» de Sigma Dos suman 13,6 %. Sus pesos iguales dan PP 32,1 %, PSOE 26,5 %, Vox 18,35 %, Sumar 6,1 %, Podemos 3 % y resto 13,95 %, conservando el total del 100 %. Nunca se promedian escaños. El resultado histórico es una serie publicada, no una estimación ponderada.
 
-Sigma Dos no aporta datos de participación, edad o sexo en estas publicaciones. En selección individual esas gráficas muestran el estado sin datos. En selección conjunta identifican únicamente a 40dB. como contribuyente. El trasvase identifica ambas fuentes, pero cada celda sin dato de Sigma Dos excluye su peso. GAD3 sigue fuera de la ponderación de octubre por corresponder a septiembre.
+Sigma Dos no aporta datos de participación, edad o sexo en estas publicaciones. En selección individual esas gráficas muestran el estado sin datos. En selección conjunta identifican únicamente a 40dB. como contribuyente. El trasvase identifica ambas fuentes, pero cada celda sin dato de Sigma Dos excluye su peso.

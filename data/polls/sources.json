@@ -19,24 +19,6 @@
     ]
   },
   {
-    "id": "gad3-2026-09",
-    "pollster": "GAD3",
-    "period": "2026-09",
-    "weight": 1,
-    "sample": 1010,
-    "fieldwork": [
-      "2026-09-01",
-      "2026-09-03"
-    ],
-    "adapter": "published-json",
-    "publishedData": "data/polls/raw/gad3/2026-09/published-data.json",
-    "dataset": "data/polls/raw/gad3/2026-09/estimation.tsv",
-    "sourceUrl": "https://www.gad3.com/barometro-abc-estimacion-de-voto-nacional-septiembre-2026/",
-    "commissionedBy": [
-      "ABC"
-    ]
-  },
-  {
     "id": "sigma-dos-2026-10",
     "pollster": "Sigma Dos",
     "period": "2026-10",
