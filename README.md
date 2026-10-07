@@ -25,4 +25,4 @@ Los originales se conservan en `data/polls/raw/`. El JSON y las descargas se reg
 
 ## Contribuciones
 
-Estoy abierto a contribuciones para aportar más datos y correguir cualquier errata que muestre la web (o mejorarla en general).
+Estoy abierto a contribuciones para añadir más datos, corregir errores en el sitio web o mejorarlo en general.
