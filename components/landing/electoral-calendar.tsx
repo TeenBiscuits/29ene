@@ -1,6 +1,7 @@
 import { copy, locales, type Locale } from "@/lib/locales";
 import drawing from "@/lib/calendar-drawing.json";
 import { electoralCalendar } from "@/lib/electoral-calendar";
+import { TodayMarker } from "@/components/landing/today-marker";
 
 const path =
   "M16 59 H589 A12 12 0 0 1 601 71 V189 A12 12 0 0 1 589 201 H16 A12 12 0 0 0 4 213 V297 A12 12 0 0 0 16 309 H589 A12 12 0 0 1 601 321 V439 A12 12 0 0 1 589 451 H16 A12 12 0 0 0 4 463 V581 A12 12 0 0 0 16 593 H589 A12 12 0 0 1 601 605 V726 A12 12 0 0 1 589 738 H16 A12 12 0 0 0 4 750 V944 A12 12 0 0 0 16 956 H589 A12 12 0 0 1 601 968 V1052 A12 12 0 0 1 589 1064 H16 A12 12 0 0 0 4 1076 V1160 A12 12 0 0 0 16 1172 H589";
@@ -34,6 +35,31 @@ const formatters = Object.fromEntries(
     },
   ]),
 ) as Record<Locale, { date: Intl.DateTimeFormat; short: Intl.DateTimeFormat }>;
+const monthByHeading: Record<string, string> = {
+  "Octubre 2026": "2026-10",
+  "Noviembre 2026": "2026-11",
+  "Diciembre 2026": "2026-12",
+};
+const calendarDayPositions = (() => {
+  const positions: { iso: string; x: number; y: number }[] = [];
+  let month: string | undefined;
+
+  for (const item of drawing) {
+    if (item.kind === "cl-mon") {
+      month = monthByHeading[item.text];
+      continue;
+    }
+    if (item.kind === "cl-d" && month) {
+      positions.push({
+        iso: `${month}-${item.text.padStart(2, "0")}`,
+        x: item.left + 17,
+        y: item.top,
+      });
+    }
+  }
+
+  return positions;
+})();
 
 export function ElectoralCalendar({ locale }: { locale: Locale }) {
   const c = copy[locale];
@@ -46,7 +72,7 @@ export function ElectoralCalendar({ locale }: { locale: Locale }) {
       : dateFormat.format(new Date(event.iso));
   };
   const renderDrawing = (verticalScale: number, mobile: boolean) => (
-        <svg viewBox={`0 0 605 ${mobile ? 1637 : 1250 * verticalScale + 150}`} className={`calendar-svg calendar-svg-${mobile ? "mobile" : "desktop"}`} aria-hidden="true">
+        <svg viewBox={`0 0 605 ${mobile ? 1637 : 1250 * verticalScale}`} className={`calendar-svg calendar-svg-${mobile ? "mobile" : "desktop"}`} aria-hidden="true">
           <path
             className="calendar-path"
             d={path}
@@ -180,6 +206,7 @@ export function ElectoralCalendar({ locale }: { locale: Locale }) {
         ))}
       </ul>
       <div className="calendar-drawing">
+        <TodayMarker positions={calendarDayPositions} />
         {renderDrawing(1.6, false)}
         {renderDrawing(1.3, true)}
         <ol className="sr-only">

@@ -13,7 +13,7 @@ export function SiteFooter({ locale, section }: { locale: Locale; section?: 'enc
     </div>
     <div className="footer-bottom">
       <span>{c.by} Pablo Portal López</span>
-      <span>{c.independent}</span>
+      <span>{c.independent} {c.journalismBasis}</span>
       <a href="https://github.com/TeenBiscuits/29ene">{c.code} <HugeiconsIcon icon={ArrowUpRight01Icon} className="external-link-icon" aria-hidden="true" /></a>
     </div>
   </footer>;

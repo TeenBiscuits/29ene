@@ -25,14 +25,14 @@ const es = {
   urns: "EL CAMINO A LAS URNAS",
   calendarTitle: "29N: el camino electoral",
   calendarSubtitle:
-    "Plazos previstos para las elecciones generales del domingo 29 de noviembre.",
+    "Plazos previstos para las elecciones generales del domingo 29 de noviembre. El anillo marca el día actual.",
   legend: "Leyenda del calendario",
   monday: "LUNES",
   months: ["Octubre 2026", "Noviembre 2026", "Diciembre 2026"],
-  pollsKicker: "LA INTENCIÓN DE VOTO",
+  pollsKicker: "Evolución de la estimación de voto",
   pollsTitle: "El pulso de las encuestas",
   pollsDescription:
-    "La evolución del voto, con las fuentes y el contexto de cada encuesta.",
+    "Consulta las estimaciones de voto y las respuestas de cada encuesta. Explora los resultados por edad, sexo e ideología.",
   proposalsKicker: "LOS PROGRAMAS ELECTORALES",
   proposalsTitle: "Las propuestas, frente a frente",
   proposalsDescription:
@@ -47,6 +47,8 @@ const es = {
   top: "Volver arriba",
   by: "Por",
   independent: "Un proyecto informativo independiente.",
+  journalismBasis:
+    "Basado en el trabajo periodístico de los/las grandes periodistas de nuestro país.",
   code: "Código abierto",
   sources: "Fuentes",
   constitution: "Constitución Española",
@@ -98,14 +100,14 @@ const gl: Copy = {
   urns: "O CAMIÑO ÁS URNAS",
   calendarTitle: "29N: o camiño electoral",
   calendarSubtitle:
-    "Prazos previstos para as eleccións xerais do domingo 29 de novembro.",
+    "Prazos previstos para as eleccións xerais do domingo 29 de novembro. O anel marca o día actual.",
   legend: "Lenda do calendario",
   monday: "LUNS",
   months: ["Outubro 2026", "Novembro 2026", "Decembro 2026"],
-  pollsKicker: "A INTENCIÓN DE VOTO",
+  pollsKicker: "Evolución da estimación do voto",
   pollsTitle: "O pulso das enquisas",
   pollsDescription:
-    "A evolución do voto, coas fontes e o contexto de cada enquisa.",
+    "Consulta as estimacións de voto e as respostas de cada enquisa. Explora os resultados por idade, sexo e ideoloxía.",
   proposalsKicker: "OS PROGRAMAS ELECTORAIS",
   proposalsTitle: "As propostas, fronte a fronte",
   proposalsDescription:
@@ -120,6 +122,8 @@ const gl: Copy = {
   top: "Volver arriba",
   by: "Por",
   independent: "Un proxecto informativo independente.",
+  journalismBasis:
+    "Baseado no traballo xornalístico dos e das grandes xornalistas do noso país.",
   code: "Código aberto",
   sources: "Fontes",
   constitution: "Constitución Española",
@@ -170,14 +174,14 @@ const ca: Copy = {
   urns: "EL CAMÍ CAP A LES URNES",
   calendarTitle: "29N: el camí electoral",
   calendarSubtitle:
-    "Terminis previstos per a les eleccions generals del diumenge 29 de novembre.",
+    "Terminis previstos per a les eleccions generals del diumenge 29 de novembre. L'anell marca el dia actual.",
   legend: "Llegenda del calendari",
   monday: "DILLUNS",
   months: ["Octubre 2026", "Novembre 2026", "Desembre 2026"],
-  pollsKicker: "LA INTENCIÓ DE VOT",
+  pollsKicker: "Evolució de l'estimació de vot",
   pollsTitle: "El pols de les enquestes",
   pollsDescription:
-    "L'evolució del vot, amb les fonts i el context de cada enquesta.",
+    "Consulta les estimacions de vot i les respostes de cada enquesta. Explora els resultats per edat, sexe i ideologia.",
   proposalsKicker: "ELS PROGRAMES ELECTORALS",
   proposalsTitle: "Les propostes, cara a cara",
   proposalsDescription:
@@ -192,6 +196,8 @@ const ca: Copy = {
   top: "Tornar a dalt",
   by: "Per",
   independent: "Un projecte informatiu independent.",
+  journalismBasis:
+    "Basat en el treball periodístic dels i les grans periodistes del nostre país.",
   code: "Codi obert",
   sources: "Fonts",
   constitution: "Constitució Espanyola",
@@ -242,14 +248,14 @@ const eu: Copy = {
   urns: "HAUTESKUNDEETARAKO BIDEA",
   calendarTitle: "29N: hauteskundeetarako bidea",
   calendarSubtitle:
-    "Azaroaren 29ko igandeko hauteskunde orokorretarako aurreikusitako epeak.",
+    "Azaroaren 29ko igandeko hauteskunde orokorretarako aurreikusitako epeak. Eraztunak gaurko eguna adierazten du.",
   legend: "Egutegiaren legenda",
   monday: "ASTELEHENA",
   months: ["2026ko urria", "2026ko azaroa", "2026ko abendua"],
-  pollsKicker: "BOTO ASMOA",
+  pollsKicker: "Boto-estimazioaren bilakaera",
   pollsTitle: "Inkesten bilakaera",
   pollsDescription:
-    "Botoaren bilakaera, inkesta bakoitzaren iturriekin eta testuinguruarekin.",
+    "Kontsultatu boto-estimazioak eta inkesta bakoitzaren erantzunak. Ikusi adinaren, sexuaren eta ideologiaren araberako emaitzak.",
   proposalsKicker: "HAUTESKUNDE PROGRAMAK",
   proposalsTitle: "Proposamenak aurrez aurre",
   proposalsDescription:
@@ -264,6 +270,8 @@ const eu: Copy = {
   top: "Gora itzuli",
   by: "Egilea:",
   independent: "Informazio proiektu independentea.",
+  journalismBasis:
+    "Gure herrialdeko kazetari handien lan periodistikoan oinarritua.",
   code: "Kode irekia",
   sources: "Iturriak",
   constitution: "Espainiako Konstituzioa",

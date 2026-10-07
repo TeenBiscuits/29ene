@@ -1,7 +1,7 @@
 # 29N / Guía electoral
 
 > [!IMPORTANT]  
-> Esta web es un proyecto independiente que he creado en mi tiempo libre. Es el tipo de guía que me gustaría tener como votante. Se basa en el trabajo periodistico de los/las grandes periodistas de nuestro país.
+> Esta web es un proyecto independiente que he creado en mi tiempo libre. Es el tipo de guía que me gustaría tener como votante. Se basa en el trabajo periodístico de los/las grandes periodistas de nuestro país.
 
 Web infográfica para ayudar a la ciudadanía a informarse sobre las elecciones generales en España, con lenguaje sencillo, fuentes enlazadas y contenido en español, galego, català y euskara.
 

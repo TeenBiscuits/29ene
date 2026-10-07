@@ -266,6 +266,13 @@ h2 {
 }
 .calendar-drawing {
   width: 100%;
+  position: relative;
+}
+.calendar-today-overlay {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  pointer-events: none;
 }
 .calendar-label-box {
   overflow: visible;
@@ -305,7 +312,7 @@ h2 {
 }
 .calendar-note {
   max-width: 545px;
-  margin: 24px auto 0;
+  margin: 28px auto 0;
 }
 .calendar-note p {
   font-size: 11px;
@@ -739,9 +746,6 @@ h2 {
   .calendar-legend li > span {
     width: 8px;
     height: 8px;
-  }
-  .calendar-note {
-    margin-top: 20px;
   }
   .calendar-note p {
     font-size: 10px;

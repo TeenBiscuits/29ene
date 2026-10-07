@@ -4,7 +4,7 @@ import { DataTable } from "./data-table";
 import { PollInsights } from "./poll-insights";
 import { useMemo, useState, type ReactNode } from 'react';
 import { HugeiconsIcon } from '@hugeicons/react';
-import { ArrowDown01Icon, Download04Icon } from '@hugeicons/core-free-icons';
+import { ArrowDown01Icon } from '@hugeicons/core-free-icons';
 import { Button } from '@/components/ui/button';
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuGroup, DropdownMenuLabel, DropdownMenuItem, DropdownMenuCheckboxItem, DropdownMenuSeparator } from '@/components/ui/dropdown-menu';
 import dynamic from 'next/dynamic';
@@ -12,6 +12,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter }
 import { pollNumbers } from '@/lib/polls/formatters';
 import { pollCopy } from '@/lib/polls/copy';
 import { pollSelectorCopy } from '@/lib/polls/selector-copy';
+import { RtveElectionCharts } from './rtve-election-charts';
 import { parties, percentage, pollDetails } from '@/lib/polls/details';
 import { ageCategories } from '@/lib/polls/demographics.mjs';
 import { aggregatePolls, type PollMetric } from '@/lib/polls/aggregation.mjs';
@@ -32,6 +33,7 @@ export function PollExplorer({ locale, breadcrumb, children }: { locale: Locale;
   const c = pollCopy[locale];
   const labels = pollSelectorCopy[locale];
   const [selectedIds, setSelectedIds] = useState(allIds);
+  const [rtveSelected, setRtveSelected] = useState(true);
   const activeIds = selectedIds;
   const period = selectedPeriod(availableSources, activeIds) ?? pollDetails.period;
   const sources = availableSources.filter(source => activeIds.includes(source.id));
@@ -72,7 +74,7 @@ export function PollExplorer({ locale, breadcrumb, children }: { locale: Locale;
         <DropdownMenuContent align="end" className="survey-company-menu">
           <DropdownMenuGroup>
             <DropdownMenuLabel>{labels.companies}</DropdownMenuLabel>
-            <DropdownMenuItem onClick={() => setSelectedIds(allIds)}>{labels.all}</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => { setSelectedIds(allIds); setRtveSelected(true); }}>{labels.all}</DropdownMenuItem>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
           <DropdownMenuGroup>
@@ -83,6 +85,9 @@ export function PollExplorer({ locale, breadcrumb, children }: { locale: Locale;
                 {source.pollster} · {source.period}
               </DropdownMenuCheckboxItem>;
             })}
+            <DropdownMenuCheckboxItem checked={rtveSelected} closeOnClick={false} onCheckedChange={checked => setRtveSelected(checked)}>
+              {labels.rtveSource}
+            </DropdownMenuCheckboxItem>
           </DropdownMenuGroup>
           <DropdownMenuSeparator />
           <p className="survey-menu-help">{labels.help}</p>
@@ -98,11 +103,25 @@ export function PollExplorer({ locale, breadcrumb, children }: { locale: Locale;
       </div>
     </div>
       <div className="survey-grid">
-        <Card className="survey-wide survey-current-card"><CardHeader><CardTitle><h2>{previousRows.length ? c.current : c.currentOnly}</h2></CardTitle><CardDescription>{previousRows.length ? c.currentDescription : c.currentOnlyDescription}</CardDescription></CardHeader><CardContent>{hasPublishedValues(comparisonMetrics, 'Estimación electoral', 'Estimación') ? <><VoteHemicycle rows={displayRows} previous={previousRows} config={comparisonConfig} locale={locale} title={c.current} currentLabel={c.currentSeries} previousLabel={c.electionSeries} noHistoricalLabel={c.noHistorical} seatLabel={c.seatNote} />{comparison.grouped ? <p className="survey-age-note">{c.comparisonGrouping}</p> : null}{incompleteEstimate ? <p className="survey-age-note">{c.publishedTotal}: {pollNumbers[locale].format(displayRows.reduce((sum, row) => sum + (row.value ?? 0), 0))}%. {c.incompleteEstimate}</p> : null}</> : empty}</CardContent><CardFooter>{sourceNote(comparisonMetrics, 'Estimación electoral', 'Estimación')} {periodSources.filter(source => source.voteReport).map(source => <a key={source.id} href={`/polls/${source.id}/vote-report.pdf`} download className="survey-report-download"><HugeiconsIcon icon={Download04Icon} size={16} aria-hidden="true" />{c.voteReport}</a>)}</CardFooter></Card>
+        <Card className="survey-wide survey-current-card">
+          <CardHeader>
+            <CardTitle><h2>{previousRows.length ? c.current : c.currentOnly}</h2></CardTitle>
+            <CardDescription>{previousRows.length ? c.currentDescription : c.currentOnlyDescription}</CardDescription>
+          </CardHeader>
+          <CardContent>
+            {hasPublishedValues(comparisonMetrics, 'Estimación electoral', 'Estimación') ? <>
+              <VoteHemicycle rows={displayRows} previous={previousRows} config={comparisonConfig} locale={locale} title={c.current} currentLabel={c.currentSeries} previousLabel={c.electionSeries} noHistoricalLabel={c.noHistorical} seatLabel={c.seatNote} />
+              {comparison.grouped ? <p className="survey-age-note">{c.comparisonGrouping}</p> : null}
+              {incompleteEstimate ? <p className="survey-age-note">{c.publishedTotal}: {pollNumbers[locale].format(displayRows.reduce((sum, row) => sum + (row.value ?? 0), 0))}%. {c.incompleteEstimate}</p> : null}
+            </> : empty}
+          </CardContent>
+          <CardFooter>{sourceNote(comparisonMetrics, 'Estimación electoral', 'Estimación')}</CardFooter>
+        </Card>
+        {rtveSelected ? <RtveElectionCharts locale={locale} /> : null}
         <Card><CardHeader><CardTitle><h2>{c.turnout}</h2></CardTitle><CardDescription>{c.turnoutDescription}</CardDescription></CardHeader><CardContent>{hasPublishedValues(metrics, recall, 'P2') ? <><SurveyBars rows={turnoutRows} config={{ percentage: { label: c.turnout, color: 'var(--chart-1)' } }} locale={locale} title={c.turnout} single height={320} /><DataTable metrics={metrics} locale={locale} sheet={recall} question="P2" segments={['Total',...voters]} turnout /></> : empty}</CardContent><CardFooter>{sourceNote(metrics, recall, 'P2')}</CardFooter></Card>
         <PollInsights locale={locale} metrics={metrics} sourceIds={activeIds} period={period} sources={availableSources} />
-        <Card className="survey-wide survey-age-card"><CardHeader><CardTitle><h2>{c.age}</h2></CardTitle><CardDescription>{c.ageDescription}</CardDescription></CardHeader><CardContent>{hasPublishedValues(ageMetrics, 'Edad', 'P3') ? <><SurveyBars rows={ageRows} config={ageConfig} locale={locale} title={c.age} stacked /><p className="survey-age-note">{c.ageNote}</p><DataTable metrics={metrics} locale={locale} sheet="Edad" question="P3" segments={['Total', ...ages]} /></> : empty}</CardContent><CardFooter>{sourceNote(ageMetrics, 'Edad', 'P3')}</CardFooter></Card>
-        <Card className="survey-wide survey-sex-card"><CardHeader><CardTitle><h2>{c.sex}</h2></CardTitle><CardDescription>{c.sexDescription}</CardDescription></CardHeader><CardContent>{hasPublishedValues(sexMetrics, 'Sexo', 'P3') ? <><SurveyBars rows={sexRows} config={ageConfig} locale={locale} title={c.sex} stacked compact /><p className="survey-age-note">{c.ageNote}</p><DataTable metrics={metrics} locale={locale} sheet="Sexo" question="P3" segments={['Hombre', 'Mujer']} /></> : empty}</CardContent><CardFooter>{sourceNote(sexMetrics, 'Sexo', 'P3')}</CardFooter></Card>
+        <Card className="survey-wide survey-age-card"><CardHeader><CardTitle><h2>{c.age}</h2></CardTitle><CardDescription>{c.ageDescription}</CardDescription></CardHeader><CardContent>{hasPublishedValues(ageMetrics, 'Edad', 'P3') ? <><SurveyBars rows={ageRows} config={ageConfig} locale={locale} title={c.age} stacked /><DataTable metrics={metrics} locale={locale} sheet="Edad" question="P3" segments={['Total', ...ages]} /></> : empty}</CardContent><CardFooter>{sourceNote(ageMetrics, 'Edad', 'P3')}</CardFooter></Card>
+        <Card className="survey-wide survey-sex-card"><CardHeader><CardTitle><h2>{c.sex}</h2></CardTitle><CardDescription>{c.sexDescription}</CardDescription></CardHeader><CardContent>{hasPublishedValues(sexMetrics, 'Sexo', 'P3') ? <><SurveyBars rows={sexRows} config={ageConfig} locale={locale} title={c.sex} stacked compact /><DataTable metrics={metrics} locale={locale} sheet="Sexo" question="P3" segments={['Hombre', 'Mujer']} /></> : empty}</CardContent><CardFooter>{sourceNote(sexMetrics, 'Sexo', 'P3')}</CardFooter></Card>
         <Card className="survey-wide"><CardHeader><CardTitle><h2>{c.transfer}</h2></CardTitle><CardDescription>{c.transferDescription} {c.selected}</CardDescription></CardHeader><CardContent>{hasPublishedValues(metrics, recall, 'P3') ? <><div className="transfer-grid">{transferGroups.map(group => <div key={group}><h3>{group} · 2023</h3><SurveyBars rows={parties.map(party => ({ group: party.key, percentage: percentage(recall, 'P3', party.response, group, metrics), fill: party.color }))} config={{ percentage: { label: c.transfer, color: parties.find(party => party.key === group)?.color ?? 'var(--chart-1)' } }} locale={locale} title={`${group}: ${c.transfer}`} single /></div>)}</div><DataTable metrics={metrics} locale={locale} sheet={recall} question="P3" segments={transferGroups} /></> : empty}</CardContent><CardFooter>{sourceNote(metrics, recall, 'P3')}</CardFooter></Card>
       </div>
   </>;
