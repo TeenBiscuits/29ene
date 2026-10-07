@@ -1,12 +1,12 @@
 # Alcance y diseño
 
-Este documento recoge las decisiones acordadas para 29N · Guía electoral. Los puntos pendientes están separados de los requisitos aprobados.
+Este documento recoge las decisiones acordadas para 29N / Guía electoral. Los puntos pendientes están separados de los requisitos aprobados.
 
 ## Objetivo
 
 Ofrecer información electoral visual y comprensible para todo el territorio español. La web tendrá fuentes enlazadas, código abierto y lenguaje sencillo. El contenido y el diseño permitirán incorporar información y modificarla con rapidez.
 
-El nombre público es **29N · Guía electoral**. El dominio previsto es `29ene.pablopl.dev`, con despliegue en Vercel. La fecha del 29 de noviembre procede del anuncio aportado durante la definición del proyecto; su publicación y cualquier calendario deberán contrastarse con las fuentes correspondientes antes de aparecer como información confirmada.
+El nombre público es **29N / Guía electoral**. El dominio previsto es `29ene.pablopl.dev`, con despliegue en Vercel. La fecha del 29 de noviembre procede del anuncio aportado durante la definición del proyecto; su publicación y cualquier calendario deberán contrastarse con las fuentes correspondientes antes de aparecer como información confirmada.
 
 ## Primera versión
 
@@ -27,12 +27,12 @@ Cuando aumente la información disponible se añadirán gráficos de encuestas d
 
 ## Idiomas y dispositivos
 
-| Idioma | Ruta |
-| --- | --- |
-| Español, principal | `/` |
-| Galego | `/gl` |
-| Català | `/ca` |
-| Euskara | `/eu` |
+| Idioma             | Ruta  |
+| ------------------ | ----- |
+| Español, principal | `/`   |
+| Galego             | `/gl` |
+| Català             | `/ca` |
+| Euskara            | `/eu` |
 
 Los cuatro idiomas se publicarán y actualizarán a la vez. Escritorio y móvil tendrán composiciones similares, adaptadas a cada formato para mantener la legibilidad y el acceso a la información.
 

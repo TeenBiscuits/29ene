@@ -1,4 +1,4 @@
-# 29N · Guía electoral
+# 29N / Guía electoral
 
 Vocabulario de la guía informativa sobre las elecciones generales en España.
 

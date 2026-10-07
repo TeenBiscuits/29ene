@@ -18,7 +18,7 @@ export function ShareButton({
   const [status, setStatus] = useState("");
   async function share() {
     const data = {
-      title: `29N · ${labels.guide}`,
+      title: `29N / ${labels.guide}`,
       text: labels.motto,
       url: window.location.href.split("#")[0],
     };
@@ -36,7 +36,12 @@ export function ShareButton({
   return (
     <div className="share-control">
       <Button variant="outline" onClick={share} className="share-button">
-        <HugeiconsIcon icon={Share01Icon} strokeWidth={1.5} data-icon="inline-start" aria-hidden="true" />
+        <HugeiconsIcon
+          icon={Share01Icon}
+          strokeWidth={1.5}
+          data-icon="inline-start"
+          aria-hidden="true"
+        />
         {labels.share}
       </Button>
       <p role="status" className="share-status">

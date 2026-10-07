@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { copy, localePath, type Locale } from "@/lib/locales";
 export function pageMetadata(locale: Locale): Metadata {
-  const title = `29N · ${copy[locale].guide}`;
+  const title = `29N / ${copy[locale].guide}`;
   const description =
     "Web infográfica para ayudar a la ciudadanía a informarse sobre las elecciones generales en España";
 

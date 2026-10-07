@@ -1,4 +1,4 @@
-# 29N · Guía electoral
+# 29N / Guía electoral
 
 Web infográfica para ayudar a la ciudadanía a informarse sobre las elecciones generales en España, con lenguaje sencillo, fuentes enlazadas y contenido en español, galego, català y euskara.
 
